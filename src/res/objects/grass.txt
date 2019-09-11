@@ -1,3 +1,6 @@
 walkable=true
 animated=false
+amountOfFrames=0
+sizeX=16
+sizeY=16
 visible=true

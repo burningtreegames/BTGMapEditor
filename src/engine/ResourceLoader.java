@@ -11,6 +11,8 @@ public class ResourceLoader
 	
 	public ResourceLoader()
 	{
+		buffer = null;
 		
+		Game.getDebug().fastCommitDebugLog("ResourceLoader Startup Complete");
 	}
 }

@@ -5,15 +5,18 @@ import com.badlogic.gdx.ApplicationListener;
 public class Game implements ApplicationListener
 {	
 	
-	private Debugging debug;
+	private static Debugging debug;
+	private static ResourceLoader resourceLoader;
 	
 	public Game(){}
 	
 	@Override
 	public void create()
 	{
-		debug = new Debugging();
-		debug.fastCommitDebugLog("Game Start Up");
+		setDebug(new Debugging());
+		resourceLoader = new ResourceLoader();
+		
+		getDebug().fastCommitDebugLog("GameMain Start Up Complete");
 	}
 	
 
@@ -49,6 +52,14 @@ public class Game implements ApplicationListener
 	{
 		// TODO Auto-generated method stub
 		
+	}
+
+	public static Debugging getDebug() {
+		return debug;
+	}
+
+	public void setDebug(Debugging debug) {
+		this.debug = debug;
 	}
 
 }
